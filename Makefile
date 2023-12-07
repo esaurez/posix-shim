@@ -35,7 +35,7 @@ export CFLAGS += -I $(INCDIR) -I $(DEMIKERNEL_HOME)/include
 #=======================================================================================================================
 
 # Demikernel Library
-export DEMIKERNEL_LIB := $(DEMIKERNEL_HOME)/lib/libdemikernel.so
+export DEMIKERNEL_LIB := $(DEMIKERNEL_HOME)/lib/
 
 # SHIM Library for Demikernel
 export SHIM_LIB := libshim.so
