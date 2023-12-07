@@ -14,7 +14,7 @@ all: all-libs
 
 all-libs:
 	mkdir -p $(LIBDIR)
-	LD_LIBRARY_PATH=$(DEMIKERNEL_LIB):$$LD_LIBRARY_PATH $(CC) $(CFLAGS) $(SRC) -fPIC -shared -o $(LIBDIR)/$(SHIM_LIB) -llibdemikernel
+	$(CC) $(CFLAGS) -L$(DEMIKERNEL_LIB) -fPIC -shared -o $(LIBDIR)/$(SHIM_LIB) $(SRC) -ldemikernel 
 
 clean:
 	rm -f $(LIBDIR)/$(SHIM_LIB)
